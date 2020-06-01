@@ -7,6 +7,7 @@ Created on Mon Jan 22 23:17:00 2018
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 from keras.utils import plot_model
+import tensorflow as tf
 from keras import backend
 
 backend.common.set_image_dim_ordering('th')
@@ -71,5 +72,8 @@ def createCNNModel(isBgModeOn):
        model.load_weights(wightFileName)
     else:
         print("Creating New CNN for training...")
+    
+    #model.save("model")
     return model
 
+#createCNNModel(0)

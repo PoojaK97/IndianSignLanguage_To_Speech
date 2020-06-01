@@ -95,7 +95,7 @@ def Main():
         elif key == ord('d'):
             x0 = x0 + 5
         elif key == 27:
-            break;
+            break
     cap.release()
     cv2.destroyAllWindows()
 

@@ -16,8 +16,6 @@ language = 'en'
 backend.common.set_image_dim_ordering('th')
 #change output array according to data
 
-output = ["House","Aboard","Baby","Bowl", "Friend","IorMe","Money","Opposite","Prisoner","You"]
-
 get_output= None
 
 def predictSign(frame,model):

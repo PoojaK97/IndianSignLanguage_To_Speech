@@ -19,7 +19,7 @@ from matplotlib import pyplot as plt
 backend.common.set_image_dim_ordering('th')
 model = None
 path = ""
-no_epoch = 50
+no_epoch = 70
 batch_size = 64
     
 def trainModel():
