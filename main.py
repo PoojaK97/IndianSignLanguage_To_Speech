@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Jan 21 16:55:41 2018
-@author: abhi
-"""
 
 import cv2
 import cnnPredict
