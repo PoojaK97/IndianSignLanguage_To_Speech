@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jan 22 23:27:18 2018
-@author: abhi
-"""
+
 import cv2
 
 #apply adaptive thresholding    
