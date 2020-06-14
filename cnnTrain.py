@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import cnnModel
 import os
 os.environ['KERAS_BACKEND'] = 'theano'

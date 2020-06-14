@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import cnnModel
 import numpy as np
 from keras import backend

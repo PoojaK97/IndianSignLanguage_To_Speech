@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import cv2
 import cnnPredict
 import cnnFilters
@@ -15,18 +13,17 @@ isAdaptiveThresholdMode = True
 roi = None
 isPredictionMode = False
 model= None
-menu = "\n c-Change Filter\n p-Predict Sign\n w-Move ROI Upside\n s-Move ROI Downside\n a-Move ROI Rightside\n d-Move ROI Leftside\n ESC-exit\n"
-
+menu = "\n c-Change Filter\n p-Predict Sign\n w-Move ROI Upside\n s-Move ROI Downside\n a-Move ROI Leftside\n d-Move ROI Rightside\n ESC-exit\n"
 
 
 def Main():
     
-      global isAdaptiveThresholdMode, isBgModeOn,x0,y0,roi,isPredictionMode,model,menu
-      cap = cv2.VideoCapture(0)
-      cap.set(3,640)
-      cap.set(4,480)
-      print(menu)  
-      while(True):
+    global isAdaptiveThresholdMode, isBgModeOn, x0, y0, roi, isPredictionMode, model, menu
+    cap = cv2.VideoCapture(0)
+    cap.set(3,640)
+    cap.set(4,480)
+    print(menu)  
+    while(True):
         ret, frame = cap.read()
         #invert frame
         frame = cv2.flip(frame, 3)
@@ -75,8 +72,8 @@ def Main():
             x0 = x0 + 5
         elif key == 27:
             break
-      cap.release()
-      cv2.destroyAllWindows()
+    cap.release()
+    cv2.destroyAllWindows()
 
 
 
