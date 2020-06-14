@@ -15,8 +15,8 @@ def Main():
     tts = gTTS(text="Change the gesture", lang='en')
     tts.save("dataset.mp3")
     cap = cv2.VideoCapture(0)
-    ret = cap.set(3,640)
-    ret = cap.set(4,480)
+    ret = cap.set(3,640) #change width of frame
+    ret = cap.set(4,480) #change height of frame
     i=0
     j=0
     #sign array should be in order 
@@ -90,4 +90,3 @@ def Main():
 
 if __name__ == "__main__":
     Main()
-

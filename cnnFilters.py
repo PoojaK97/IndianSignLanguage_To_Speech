@@ -1,6 +1,11 @@
-# -*- coding: utf-8 -*-
-
 import cv2
+
+#original image without any filter    
+def noFilterMode(frame, x0, y0, width, height ):
+     
+    cv2.rectangle(frame, (x0,y0),(x0+width,y0+height),(0,255,0),1)
+    roi = frame[y0:y0+height, x0:x0+width]
+    return roi
 
 #apply adaptive thresholding    
 def adaptiveThresholdMode(frame, x0, y0, width, height ):
@@ -10,14 +15,7 @@ def adaptiveThresholdMode(frame, x0, y0, width, height ):
     gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)  
     blur = cv2.GaussianBlur(gray,(5,5),2)
     res = cv2.adaptiveThreshold(blur,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV,11,2)
-    return res  
-    
-#original image without any filter    
-def noFilterMode(frame, x0, y0, width, height ):
-     
-    cv2.rectangle(frame, (x0,y0),(x0+width,y0+height),(0,255,0),1)
-    roi = frame[y0:y0+height, x0:x0+width]
-    return roi   
+    return res     
  
 # apply sift with adaptive thresholding   
 def siftMode(frame, x0, y0, width, height ):
@@ -32,5 +30,5 @@ def siftMode(frame, x0, y0, width, height ):
     sift = cv2.xfeatures2d.SIFT_create()
     kp = sift.detect(img, None)
     #draw keypoints
-    img = cv2.drawKeypoints(img, kp, img, (0,0,255))
+    img = cv2.drawKeypoints(img, kp, img, (0,255,0))
     return img 
